@@ -66,6 +66,11 @@ public abstract class AbstractFileCache implements Serializable {
     }
 
     public byte[] getFileBytes(File file){
+        byte[] bytes = cache.get(file);
+        if(bytes != null){
+            return bytes;
+        }
+        //
 
     }
 
